@@ -9,11 +9,11 @@ body {
 /* TÍTULO PRINCIPAL */
 .tituloPrincipal {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .tituloPrincipal h1 {
     color: red;
-    font-size: 44px;
+    font-size: 36px;
     letter-spacing: 2px;
 }
 
@@ -21,7 +21,7 @@ body {
 .loginContainer {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    padding: 20px;
 }
 .loginCard {
     background: #111;
@@ -34,7 +34,7 @@ body {
     text-align: center;
     color: red;
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 22px;
 }
 .loginCard label {
     color: red;
@@ -42,7 +42,7 @@ body {
 }
 .loginCard select,
 .loginCard input {
-    width: 90%;
+    width: 100%;
     padding: 8px;
     margin: 5px 0 10px 0;
     border-radius: 6px;
@@ -75,28 +75,39 @@ body {
 .containerSistema {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 90%;
+    max-width: 600px;
     margin: auto;
 }
 
 /* TOP BAR */
 .topBar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* centraliza título */
     align-items: center;
     margin-bottom: 15px;
+    position: relative; /* botão logout posicionado absoluto */
 }
+
 .topBar h2 {
-    font-size: 22px;
+    font-size: 28px; /* maior */
+    text-align: center;
+    flex: 1;
+    color: red;
 }
+
 .logoutBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     background: red;
     color: black;
     border: none;
     padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 .logoutBtn:hover {
     background: darkred;
@@ -112,10 +123,10 @@ body {
 }
 .card h3 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 .card input {
-    width: 90%;
+    width: 100%;
     padding: 7px;
     margin-bottom: 6px;
     border-radius: 5px;
@@ -127,22 +138,37 @@ body {
 }
 .card button {
     padding: 8px;
-    width: 50%;
+    width: 48%;
+    margin-right: 4%;
+    margin-top: 5px;
     border-radius: 5px;
     background: red;
     color: black;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
+}
+.card button:last-child {
+    margin-right: 0;
 }
 .card button:hover {
     background: darkred;
     color: white;
 }
 
+/* BOTÕES ESPECIAIS */
+.card button[onclick*="salvarAberturaEDespesas"] {
+    background: green;
+    color: black;
+}
+.card button[onclick*="salvarFechamento"] {
+    background: blue;
+    color: white;
+}
+
 /* INPUT CALENDÁRIO */
 .inputCalendario {
-    width: 90%;
+    width: 100%;
     padding: 8px;
     border-radius: 6px;
     border: 1px solid red;
@@ -165,4 +191,45 @@ body {
 .resultado p {
     font-weight: bold;
     font-size: 16px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .containerSistema {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .topBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topBar h2 {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .logoutBtn {
+        position: static;
+        transform: none;
+        margin-bottom: 5px;
+    }
+
+    .card input {
+        font-size: 14px;
+    }
+
+    .card button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .resultado p {
+        font-size: 14px;
+    }
+
+    .tituloPrincipal h1 {
+        font-size: 28px;
+    }
 }
