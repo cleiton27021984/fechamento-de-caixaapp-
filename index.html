@@ -63,6 +63,8 @@
             <button onclick="addDespesa()">Adicionar Despesa</button>
             <ul id="listaDespesas"></ul>
             <p>Total Despesas: R$ <span id="totalDespesas">0.00</span></p>
+            <!-- BOTÃO SALVAR ABERTURA + DESPESAS -->
+            <button onclick="salvarAberturaEDespesas()" style="background:green; color:black; margin-top:10px;">💾 Salvar Abertura & Despesas</button>
         </div>
 
         <!-- FECHAMENTO DE CAIXA -->
@@ -76,6 +78,8 @@
             <input type="number" id="cartao" placeholder="Cartão">
             <input type="number" id="kmFinal" placeholder="KM Final">
             <button onclick="calcular()">Calcular Resultado</button>
+            <!-- BOTÃO SALVAR FECHAMENTO -->
+            <button onclick="salvarFechamento()" style="background:blue; color:white; margin-top:10px;">💾 Salvar Fechamento</button>
         </div>
 
         <!-- RESULTADO -->
