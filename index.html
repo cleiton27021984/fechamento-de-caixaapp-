@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schulz45 Motorista</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TÍTULO -->
+<div class="tituloPrincipal">
+    <h1>SCHULZ45 MOTORISTA</h1>
+</div>
+
+<!-- LOGIN -->
+<div class="loginContainer">
+    <div class="loginCard">
+        <h2>Fechamento de Caixa</h2>
+
+        <label>Usuário</label>
+        <select id="usuarioSelect">
+            <option value="schulz45">👑 schulz45</option>
+            <option value="visitante">👀 visitante</option>
+        </select>
+
+        <label>Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha">
+
+        <button onclick="login()">Entrar</button>
+    </div>
+</div>
+
+<!-- SISTEMA -->
+<div id="sistema" style="display:none;">
+
+    <div class="topBar">
+        <h2>🚗 Controle de Caixa</h2>
+        <button onclick="logout()" class="logoutBtn">Sair</button>
+    </div>
+
+    <div class="containerSistema">
+
+        <!-- DATA INICIAL COM CALENDÁRIO FUNCIONAL -->
+        <div class="card">
+            <h3>📅 Data do Dia</h3>
+            <input type="date" id="dataInicial" class="inputCalendario">
+        </div>
+
+        <!-- ABERTURA DE CAIXA -->
+        <div class="card">
+            <h3>🟢 Abertura de Caixa</h3>
+            <input type="number" id="aberturaDinheiro" placeholder="Dinheiro Inicial">
+            <input type="number" id="aberturaMoeda" placeholder="Moeda Inicial">
+            <input type="number" id="kmInicial" placeholder="KM Inicial">
+        </div>
+
+        <!-- DESPESAS -->
+        <div class="card">
+            <h3>💸 Despesas</h3>
+            <input type="text" id="descricaoDespesa" placeholder="Descrição">
+            <input type="number" id="valorDespesa" placeholder="Valor">
+            <button onclick="addDespesa()">Adicionar Despesa</button>
+            <ul id="listaDespesas"></ul>
+            <p>Total Despesas: R$ <span id="totalDespesas">0.00</span></p>
+        </div>
+
+        <!-- FECHAMENTO DE CAIXA -->
+        <div class="card">
+            <h3>🔵 Fechamento de Caixa</h3>
+            <input type="number" id="uber" placeholder="Uber">
+            <input type="number" id="app99" placeholder="99">
+            <input type="number" id="particular" placeholder="Particular">
+            <input type="number" id="dinheiroFinal" placeholder="Dinheiro Final">
+            <input type="number" id="moedaFinal" placeholder="Moeda Final">
+            <input type="number" id="cartao" placeholder="Cartão">
+            <input type="number" id="kmFinal" placeholder="KM Final">
+            <button onclick="calcular()">Calcular Resultado</button>
+        </div>
+
+        <!-- RESULTADO -->
+        <div class="card resultado">
+            <h3>📊 Resultado</h3>
+            <p>Data: <span id="dataRelatorio">---</span></p>
+            <p>Lucro Bruto: R$ <span id="lucroBruto">0.00</span></p>
+            <p>Lucro Líquido: R$ <span id="lucroLiquido">0.00</span></p>
+            <p>KM Rodado: <span id="kmRodado">0</span> km</p>
+            <p>Média por KM (Bruto): R$ <span id="mediaKm">0.00</span></p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* GERAL */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    color: red;
+}
+
+/* TÍTULO PRINCIPAL */
+.tituloPrincipal {
+    text-align: center;
+    margin-top: 30px;
+}
+.tituloPrincipal h1 {
+    color: red;
+    font-size: 44px;
+    letter-spacing: 2px;
+}
+
+/* LOGIN */
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.loginCard {
+    background: #111;
+    width: 320px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255,0,0,0.5);
+}
+.loginCard h2 {
+    text-align: center;
+    color: red;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+.loginCard label {
+    color: red;
+    font-size: 16px;
+}
+.loginCard select,
+.loginCard input {
+    width: 90%;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border-radius: 6px;
+    border: 1px solid red;
+    background: black;
+    color: red;
+    font-size: 16px;
+}
+.loginCard button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background: red;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.loginCard button:hover {
+    background: darkred;
+    color: white;
+}
+
+/* SISTEMA */
+#sistema {
+    background: black;
+    padding: 15px;
+    min-height: 100vh;
+}
+.containerSistema {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: auto;
+}
+
+/* TOP BAR */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.topBar h2 {
+    font-size: 22px;
+}
+.logoutBtn {
+    background: red;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.logoutBtn:hover {
+    background: darkred;
+    color: white;
+}
+
+/* CARDS */
+.card {
+    background: #111;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.card input {
+    width: 90%;
+    padding: 7px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    border: 1px solid red;
+    background: black;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+.card button {
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+    background: red;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+.card button:hover {
+    background: darkred;
+    color: white;
+}
+
+/* INPUT CALENDÁRIO */
+.inputCalendario {
+    width: 90%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid red;
+    background: black;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+.inputCalendario::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* RESULTADO */
+.resultado {
+    background: #111;
+    padding: 12px;
+    margin-top: 10px;
+}
+.resultado p {
+    font-weight: bold;
+    font-size: 16px;
+}
